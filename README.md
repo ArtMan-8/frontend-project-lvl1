@@ -17,4 +17,5 @@ $ npm link
 
 ```bash
 $ brain-even
+$ brain-calc
 ```

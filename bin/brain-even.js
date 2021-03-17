@@ -17,7 +17,9 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 for (let i = 1; i <= NUMBER_OF_QUESTIONS; i += 1) {
   const questionNumber = getRandomNumber();
   const isEven = !(questionNumber % 2);
+
   const answer = readlineSync.question(`Question: ${questionNumber} `);
+  console.log(`Your answer: ${answer}`);
 
   if (
     (!isEven && answer.toLowerCase() !== Answer.NO)
@@ -32,7 +34,6 @@ for (let i = 1; i <= NUMBER_OF_QUESTIONS; i += 1) {
     break;
   }
 
-  console.log(`Your answer: ${answer}`);
   console.log('Correct!');
 
   if (i === NUMBER_OF_QUESTIONS) {
