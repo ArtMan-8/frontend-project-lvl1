@@ -1,12 +1,7 @@
 import startGame from '../src/index.js';
-import { getRandomNumber } from '../src/utils.js';
+import { Answers, getRandomNumber } from '../src/utils.js';
 
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-export const Answers = {
-  YES: 'yes',
-  NO: 'no',
-};
 
 const getGameData = () => {
   const number = getRandomNumber(0, 100);

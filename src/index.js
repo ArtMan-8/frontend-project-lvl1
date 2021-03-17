@@ -3,18 +3,18 @@ import readlineSync from 'readline-sync';
 const NUMBER_OF_QUESTIONS = 3;
 
 const startGame = (rules, getGameData) => {
-  console.log('-= Welcome to the Brain Games! =-');
+  console.log('Welcome to the Brain Games!');
   console.log(`${rules}`);
 
-  const userName = readlineSync.question('May I have your name? ');
+  const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName}`);
 
   return () => {
     for (let i = 1; i <= NUMBER_OF_QUESTIONS; i += 1) {
       const [question, result] = getGameData();
 
-      const answer = readlineSync.question(`Question: ${question} `);
-      console.log(`Your answer: ${answer}`);
+      console.log(`Question: ${question}`);
+      const answer = readlineSync.question('Your answer: ');
 
       if (answer === result) {
         console.log('Correct!');

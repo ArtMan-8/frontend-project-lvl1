@@ -24,7 +24,7 @@ const getGameData = () => {
   const mathOperation = getRandomMathOperaion(MathOperaions);
 
   const result = `${getCalcResult(number1, number2, mathOperation)}`;
-  const question = `${number1} ${mathOperation} ${number2} = `;
+  const question = `${number1} ${mathOperation} ${number2}`;
   return [question, result];
 };
 
