@@ -1,7 +1,24 @@
 import startGame from '../src/index.js';
-import { getRandomNumber, getGcdResult } from '../src/utils.js';
+import { getRandomNumber } from '../src/utils.js';
 
 const RULES = 'Find the greatest common divisor of given numbers.';
+
+const getGcdResult = (num1, num2) => {
+  let min = num1;
+  let max = num2;
+
+  if (min > max) {
+    [min, max] = [num2, num1];
+  }
+
+  let divider = min;
+
+  while (min % divider || max % divider) {
+    divider -= 1;
+  }
+
+  return divider;
+};
 
 const getGameData = () => {
   const number1 = getRandomNumber(1, 20);
