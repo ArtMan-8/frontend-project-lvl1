@@ -1,16 +1,14 @@
-export const NUMBER_OF_QUESTIONS = 3;
-
-export const MathOperaions = {
+const MathOperaions = {
   PLUS: '+',
   MINUS: '-',
   MULTI: '*',
 };
 
-export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 export const getRandomMathOperaion = () => {
   const mathOperaions = Object.values(MathOperaions);
-  return mathOperaions[getRandomNumber(Object.values(MathOperaions).length)];
+  return mathOperaions[getRandomNumber(0, mathOperaions.length)];
 };
 
 export const getCalcResult = (num1, num2, operation) => {
