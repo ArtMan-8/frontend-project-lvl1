@@ -1,20 +1,17 @@
 import readlineSync from 'readline-sync';
 import getUserName from '../src/index.js';
-import {
-  NUMBER_OF_QUESTIONS, getRandomMathOperaion, getRandomNumber, getCalcResult,
-} from '../src/utils.js';
+import { NUMBER_OF_QUESTIONS, getRandomNumber, getGcdResult } from '../src/utils.js';
 
-const gameCalc = () => {
+const gameGcd = () => {
   const userName = getUserName();
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
 
   for (let i = 1; i <= NUMBER_OF_QUESTIONS; i += 1) {
-    const number1 = getRandomNumber(0, 20);
-    const number2 = getRandomNumber(0, 20);
-    const mathOperation = getRandomMathOperaion();
-    const result = getCalcResult(number1, number2, mathOperation);
+    const number1 = getRandomNumber(1, 20);
+    const number2 = getRandomNumber(1, 20);
+    const result = getGcdResult(number1, number2);
 
-    const answer = readlineSync.question(`Question: ${number1} ${mathOperation} ${number2} = `);
+    const answer = readlineSync.question(`Question: ${number1} ${number2} `);
     console.log(`Your answer: ${answer}`);
 
     if (+answer !== result) {
@@ -33,4 +30,4 @@ const gameCalc = () => {
   }
 };
 
-export default gameCalc;
+export default gameGcd;

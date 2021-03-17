@@ -18,4 +18,5 @@ $ npm link
 ```bash
 $ brain-even
 $ brain-calc
+$ brain-gcd
 ```

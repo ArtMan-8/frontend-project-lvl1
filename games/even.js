@@ -12,7 +12,7 @@ const gameEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 1; i <= NUMBER_OF_QUESTIONS; i += 1) {
-    const questionNumber = getRandomNumber(100);
+    const questionNumber = getRandomNumber(0, 100);
     const isEven = !(questionNumber % 2);
 
     const answer = readlineSync.question(`Question: ${questionNumber} `);
