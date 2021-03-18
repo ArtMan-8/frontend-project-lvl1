@@ -13,6 +13,10 @@
 $ npm link
 ```
 
+[![asciicast](https://asciinema.org/a/RwUZFdUAPwTsKTmhcg4Zqog26.svg)](https://asciinema.org/a/RwUZFdUAPwTsKTmhcg4Zqog26)
+
+<br />
+
 ## Run games
 
 ```bash
@@ -22,3 +26,22 @@ $ brain-gcd
 $ brain-progression
 $ brain-prime
 ```
+
+<br />
+
+## Examples
+
+### brain-even
+[![asciicast](https://asciinema.org/a/e3WB2BaIqkU35IzaDPFgLgSF2.svg)](https://asciinema.org/a/e3WB2BaIqkU35IzaDPFgLgSF2)
+
+### brain-calc
+[![asciicast](https://asciinema.org/a/2fQXqApMMFXElzVrdDjDT5ZAL.svg)](https://asciinema.org/a/2fQXqApMMFXElzVrdDjDT5ZAL)
+
+### brain-gcd
+[![asciicast](https://asciinema.org/a/BEXuzc5CsD3Ib2NAPbBf3LZsQ.svg)](https://asciinema.org/a/BEXuzc5CsD3Ib2NAPbBf3LZsQ)
+
+### brain-progression
+[![asciicast](https://asciinema.org/a/b2mifx78wmzBHPuXDxIz9lBYv.svg)](https://asciinema.org/a/b2mifx78wmzBHPuXDxIz9lBYv)
+
+### brain-prime
+[![asciicast](https://asciinema.org/a/5pZkzN8oe2ITaiNVbMhFosFnm.svg)](https://asciinema.org/a/5pZkzN8oe2ITaiNVbMhFosFnm)
