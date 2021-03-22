@@ -1,5 +1,5 @@
-import startGame from '../src/index.js';
-import { getRandomMathOperaion, getRandomNumber } from '../src/utils.js';
+import startGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const RULES = 'What is the result of the expression?';
 
@@ -7,6 +7,11 @@ const MathOperaions = {
   PLUS: '+',
   MINUS: '-',
   MULTI: '*',
+};
+
+const getRandomMathOperaion = (operations) => {
+  const mathOperaions = Object.values(operations);
+  return mathOperaions[getRandomNumber(0, mathOperaions.length)];
 };
 
 export const getCalcResult = (num1, num2, operation) => {
