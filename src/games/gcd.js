@@ -4,20 +4,9 @@ import getRandomNumber from '../utils.js';
 const RULES = 'Find the greatest common divisor of given numbers.';
 
 const getGcdResult = (num1, num2) => {
-  let min = num1;
-  let max = num2;
+  if (num2 === 0) return num1;
 
-  if (min > max) {
-    [min, max] = [num2, num1];
-  }
-
-  let divider = min;
-
-  while (min % divider || max % divider) {
-    divider -= 1;
-  }
-
-  return divider;
+  return getGcdResult(num2, num1 % num2);
 };
 
 const getGameData = () => {

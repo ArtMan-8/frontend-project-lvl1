@@ -8,15 +8,12 @@ const startGame = (rules, getGameData) => {
   console.log(`${rules}`);
 
   return () => {
-    for (let i = 1; i <= QUESTIONS_COUNT; i += 1) {
+    let currentQestionNumber = 1;
+    while (currentQestionNumber <= QUESTIONS_COUNT) {
       const [question, result] = getGameData();
 
       console.log(`Question: ${question}`);
       const answer = readlineSync.question('Your answer: ');
-
-      if (answer === result) {
-        console.log('Correct!');
-      }
 
       if (answer !== result) {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
@@ -24,10 +21,11 @@ const startGame = (rules, getGameData) => {
         return;
       }
 
-      if (i === QUESTIONS_COUNT) {
-        console.log(`Congratulations, ${userName}!`);
-      }
+      console.log('Correct!');
+      currentQestionNumber += 1;
     }
+
+    console.log(`Congratulations, ${userName}!`);
   };
 };
 

@@ -4,10 +4,12 @@ import Answers from '../constants.js';
 
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getGameData = () => {
-  const number = getRandomNumber(0, 100);
+const isEven = (num) => (!(num % 2));
 
-  const result = number % 2 ? Answers.NO : Answers.YES;
+const getGameData = () => {
+  const number = getRandomNumber();
+
+  const result = isEven(number) ? Answers.YES : Answers.NO;
   const question = number;
   return [question, result];
 };

@@ -19,7 +19,7 @@ export const getCalcResult = (num1, num2, operation) => {
     case MathOperaions.PLUS: return num1 + num2;
     case MathOperaions.MINUS: return num1 - num2;
     case MathOperaions.MULTI: return num1 * num2;
-    default: return NaN;
+    default: throw new Error(`Unknow math operation: '${operation}'`);
   }
 };
 

@@ -8,9 +8,29 @@
 ---
 
 ## Setup
+### Installing dependencies 
 
 ```bash
-$ npm link
+$ make install
+```
+
+### Installing games
+#### in Linux
+
+```bash
+$ make game-linux
+```
+
+#### in Windows
+
+```bash
+$ make game-windows
+```
+
+### UnInstalling games 
+
+```bash
+$ make game-uninstall
 ```
 
 [![asciicast](https://asciinema.org/a/RwUZFdUAPwTsKTmhcg4Zqog26.svg)](https://asciinema.org/a/RwUZFdUAPwTsKTmhcg4Zqog26)
